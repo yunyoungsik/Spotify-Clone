@@ -5,8 +5,8 @@ import {
   createSong,
   deleteAlbum,
   deleteSong,
-} from '../controller/admin.controller';
-import { protecteRoute, requireAdmin } from '../middleware/auth.middleware';
+} from '../controller/admin.controller.js';
+import { protecteRoute, requireAdmin } from '../middleware/auth.middleware.js';
 
 const router = Router();
 

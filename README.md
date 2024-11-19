@@ -1,4 +1,5 @@
 # SPOTIFY CLONE
+[참고영상](https://youtu.be/4sbklcQ0EXc?si=KyvLzI7cdLKzD40L)
 
 ## BACKEND
 ```
@@ -18,4 +19,8 @@ npx tailwindcss init -p
 npm i -D @types/node
 
 npm install @clerk/clerk-react
+
+npm i react-router-dom
+npm i axios
+npm i lucide-react
 ```
