@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import { clerkMiddleware } from '@clerk/express';
 import fileUpload from 'express-fileupload';
 import path from 'path';
+import cors from 'cors';
 
 import { connectDB } from './lib/db.js';
 
@@ -18,6 +19,13 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
 const __dirname = path.resolve();
+
+app.use(
+  cors({
+    origin: 'http://localhost:3000',
+    credentials: true,
+  })
+);
 
 app.use(express.json()); // req.body를 파싱하기 위해 사용
 app.use(clerkMiddleware()); // 인증 정보를 req 객체에 추가
@@ -41,11 +49,9 @@ app.use('/api/stats', statRoutes);
 
 // error handler
 app.use((err, req, res, next) => {
-  res
-    .status(500)
-    .json({
-      message: process.env.NODE_ENV === 'production' ? 'Internal Server Error' : err.message,
-    });
+  res.status(500).json({
+    message: process.env.NODE_ENV === 'production' ? 'Internal Server Error' : err.message,
+  });
 });
 
 app.listen(PORT, () => {

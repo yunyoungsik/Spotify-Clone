@@ -23,4 +23,6 @@ npm install @clerk/clerk-react
 npm i react-router-dom
 npm i axios
 npm i lucide-react
+
+npx shadcn@latest add card
 ```
