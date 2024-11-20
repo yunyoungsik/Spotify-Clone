@@ -25,4 +25,6 @@ npm i axios
 npm i lucide-react
 
 npx shadcn@latest add card
+npx shadcn@latest add resizable
+npx shadcn@latest add scroll-area
 ```
