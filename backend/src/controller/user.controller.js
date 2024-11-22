@@ -7,9 +7,8 @@ export const getAllUsers = async (req, res, next) => {
     // 현재 사용자의 ID와 다른 사용자를 검색
     // User 컬렉션에서 clerkId가 현재 사용자 ID와 같지 않은 문서들을 찾음
     const users = await User.find({ clerkId: { $ne: currentUserId } });
-
     res.status(200).json(users);
-  } catch (error) {
-    next(error);
-  }
+	} catch (error) {
+		next(error);
+	}
 };

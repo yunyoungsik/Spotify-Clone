@@ -23,10 +23,10 @@ npm install @clerk/clerk-react
 npm i react-router-dom
 npm i axios
 npm i lucide-react
+npm i zustand
 
 npx shadcn@latest add card
 npx shadcn@latest add resizable
 npx shadcn@latest add scroll-area
-
-npm i zustand
+npx shadcn@latest add avatar
 ```
