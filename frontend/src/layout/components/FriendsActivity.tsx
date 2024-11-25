@@ -9,8 +9,6 @@ const FriendsActivity = () => {
   const { users, fetchUsers } = useChatStore();
   const { user } = useUser();
 
-console.log(users)
-
   const isPlaying = true;
 
   useEffect(() => {
