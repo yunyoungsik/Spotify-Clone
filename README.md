@@ -29,4 +29,5 @@ npx shadcn@latest add card
 npx shadcn@latest add resizable
 npx shadcn@latest add scroll-area
 npx shadcn@latest add avatar
+npx shadcn@latest add slider
 ```
